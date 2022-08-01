@@ -28,6 +28,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
+				//TODO: FONTS SHOULD BE INTEGRATED INTO THE WEB LIB
 				aeonik: ['Aeonik', ...defaultTheme.fontFamily.sans],
 				mono: ['Aeonik Mono', ...defaultTheme.fontFamily.mono]
 			},
@@ -38,6 +39,7 @@ module.exports = {
 			colors: {
 				'primary': withOpacityValue('--color-primary'),
 
+				//TODO: ALL THIS SHOULD BE MIGRATED TO WEB-LIB
 				'neutral-0': withOpacityValue('--color-neutral-0'),
 				'neutral-100': withOpacityValue('--color-neutral-100'),
 				'neutral-200': withOpacityValue('--color-neutral-200'),

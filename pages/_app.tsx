@@ -20,7 +20,6 @@ function	MyApp(props: AppProps): ReactElement {
 	function handleExitComplete(): void {
 		if (typeof window !== 'undefined') {
 			document.getElementById('app')?.scrollIntoView({behavior: 'smooth'});
-			// window.scrollTo({top: 800, behavior: 'smooth'});
 		}
 	}
 

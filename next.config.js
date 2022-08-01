@@ -1,11 +1,6 @@
 const withPWA = require('next-pwa');
 
 module.exports = withPWA({
-	experimental: {
-		images: {
-			allowFutureImage: true
-		}
-	},
 	images: {
 		domains: [
 			'rawcdn.githack.com',
