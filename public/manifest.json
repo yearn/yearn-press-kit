@@ -1,14 +1,13 @@
 {
-	"name": "yWeb",
-	"short_name": "yWeb",
-	"description": "Template used for Yearn's projects",
+	"name": "Yearn Press Kit",
+	"short_name": "yPress",
+	"description": "A centralized asset bank for a decentralized brand. Take the blue pill and enter the world of yearn.",
 	"iconPath": "./favicons/apple-icon.png",
 	"locale": "en-US",
-	"uri": "https://web.ycorpo.com/",
-	"og": "https://web.ycorpo.com/og.jpeg",
+	"uri": "https://yearn-press-kit.vercel.app/",
+	"og": "https://yearn-press-kit.vercel.app/og.png",
 	"twitter": "@iearnfinance",
-	"github": "https://github.com/yearn/yearn-template",
-
+	"github": "https://github.com/Majorfi/yearn-press-kit",
 	"icons": [
 		{
 			"src": "./favicons/android-icon-192x192.png",
@@ -27,7 +26,7 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#FF90A1",
+	"theme_color": "#FFFFFF",
 	"background_color": "#FFFFFF",
 	"title_color": "#000000",
 	"start_url": "/",
