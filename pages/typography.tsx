@@ -93,7 +93,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/promo_1.jpg'}
+							src={'/typography/promo_1.png'}
 							width={1200}
 							height={680}
 							quality={90}
@@ -107,7 +107,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/ui.jpg'}
+							src={'/typography/ui.png'}
 							width={1200}
 							height={680}
 							quality={90}
@@ -121,7 +121,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 h-[680px] border bg-black'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/promo_2.jpg'}
+							src={'/typography/promo_2.png'}
 							width={1200}
 							height={680}
 							quality={90}
@@ -134,7 +134,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/promo_3.jpg'}
+							src={'/typography/promo_3.png'}
 							width={1200}
 							height={680}
 							quality={90}

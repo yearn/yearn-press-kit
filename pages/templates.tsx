@@ -51,7 +51,7 @@ function	Templates(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/templates/twitter.jpg'}
+							src={'/templates/twitter.png'}
 							width={1200}
 							height={680}
 							quality={90}

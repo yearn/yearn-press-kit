@@ -45,7 +45,7 @@ function	StraplineSignOffs(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/straplines_and_signoffs/strapline.jpg'}
+							src={'/straplines-and-signoffs/straline.png'}
 							width={1200}
 							height={680}
 							quality={90}
@@ -59,7 +59,7 @@ function	StraplineSignOffs(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/straplines_and_signoffs/sign_off.jpg'}
+							src={'/straplines-and-signoffs/sign_off.png'}
 							width={1200}
 							height={680}
 							quality={90}

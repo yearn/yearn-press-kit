@@ -45,7 +45,7 @@ function	Applications(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/applications/YEARN_EVENT_WEB_1.jpg'}
+							src={'/applications/YEARN_EVENT_WEB_1.png'}
 							width={1200}
 							height={680}
 							quality={90}
@@ -59,7 +59,7 @@ function	Applications(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/applications/YEARN_MERCH_1_2.jpg'}
+							src={'/applications/YEARN_MERCH_1_2.png'}
 							width={1200}
 							height={680}
 							quality={90}
@@ -73,7 +73,7 @@ function	Applications(): ReactElement {
 					<div className={'my-6 h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/applications/YEARN_MERCH_2_2.jpg'}
+							src={'/applications/YEARN_MERCH_2_2.png'}
 							width={1200}
 							height={680}
 							quality={90}
