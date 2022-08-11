@@ -41,20 +41,20 @@ function	Colors(): ReactElement {
 			<Content
 				title={'Primary Palette'}
 				description={'Our primary color palette consists of Blue, White and Black.\nThese colours contrast to create high visibility.'}>
-				<div className={'grid grid-cols-1 gap-x-5 gap-y-14 pb-10 md:grid-cols-3'}>
-					<div className={'my-6 h-[315px] bg-yearn-blue px-5 py-4 text-white'}>
+				<div className={'grid grid-cols-1 gap-x-5 pb-10 md:grid-cols-3 md:gap-y-14'}>
+					<div className={'mt-6 h-[315px] bg-yearn-blue px-5 py-4 text-white md:my-6'}>
 						<p>{'Yearn Blue'}</p>
 						<p>{'0675F9'}</p>
 						<p>{'6.87.249'}</p>
 						<p>{'100.75.0.0'}</p>
 					</div>
-					<div className={'my-6 h-[315px] border border-neutral-400 bg-white px-5 py-4 text-black'}>
+					<div className={'mt-6 h-[315px] border border-neutral-400 bg-white px-5 py-4 text-black md:my-6'}>
 						<p>{'White'}</p>
 						<p>{'FFFFFF'}</p>
 						<p>{'255.255.255'}</p>
 						<p>{'0.0.0.0'}</p>
 					</div>
-					<div className={'my-6 h-[315px] bg-black px-5 py-4 text-white'}>
+					<div className={'mt-6 h-[315px] bg-black px-5 py-4 text-white md:my-6'}>
 						<p>{'Black'}</p>
 						<p>{'000000'}</p>
 						<p>{'0.0.0'}</p>
