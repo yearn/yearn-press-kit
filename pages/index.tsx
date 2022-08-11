@@ -41,10 +41,10 @@ function    DownloadButtons({
 		<motion.div
 			initial={'initial'}
 			whileInView={'enter'}>
-			<div className={'flex flex-row items-center space-x-6'}>
-				<a href={srcScreen} download className={'h-10 w-[184px] border border-primary py-2 text-center font-bold text-primary'}>{'Download for Screen'}</a>
-				<a href={srcPrint} download className={'h-10 w-[184px] border border-primary py-2 text-center font-bold text-primary'}>{'Download for Print'}</a>
-				<a href={srcPng} download className={'h-10 w-[184px] border border-primary py-2 text-center font-bold text-primary'}>{'Download PNG'}</a>
+			<div className={'flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0'}>
+				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Screen'}</a>
+				<a href={srcPrint} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Print'}</a>
+				<a href={srcPng} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download PNG'}</a>
 			</div>
 		</motion.div>
 	);
@@ -60,7 +60,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Primary Logo'}
 					description={'Our default, full-color landscape logo only ever appears\non white background.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_primary.svg'}
@@ -81,7 +81,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'White logo on dark background'}
 					description={'In cases where the logo appears on a dark background,\nuse the white logo version.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_black_background.svg'}
@@ -99,7 +99,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'White logo on dark background'}
 					description={'In cases where the logo cannot be printed in full colour\nuse the black logo version.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_white_background.svg'}
@@ -119,7 +119,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Clearspace'}
 					description={'Our logo should always be prominent and legible. The clear space exists to prevent other elements from being placed too close.\nClear space is equal to x1 Yearn symbol.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_clearspace.svg'}
@@ -133,7 +133,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Minimum size'}
 					description={'The minimum recommended size of the logo is 85 pixels wide (on screen) or 30mm wide (in print).\n​'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_minimum_size.svg'}
@@ -153,7 +153,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Primary Symbol'}
 					description={'Our default, full-color symbol only ever appears\non white background.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/symbol.svg'}
@@ -174,7 +174,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'White symbol on dark background'}
 					description={'In cases where the symbol appears on a dark background,\nuse the white symbol version.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/symbol_black_background.svg'}
@@ -192,7 +192,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Black symbol on white background'}
 					description={'In cases where the symbol cannot be printed in full colour\nuse the black symbol version.'}>
-					<div className={'my-6 h-[315px] bg-white'}>
+					<div className={'my-6 bg-white md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/symbol_white_background.svg'}
@@ -212,7 +212,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Clearspace'}
 					description={'Our symbol should always be prominent and legible. The clear space exists to prevent other elements from being placed too close.\nClear space is equal to x1 Yearn symbol.'}>
-					<div className={'my-6 h-[315px] bg-white'}>
+					<div className={'my-6 bg-white md:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/symbol_clearspace.svg'}
@@ -226,7 +226,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Minimum size'}
 					description={'The minimum recommended size of the symbol is 40 pixels wide (on screen) or 15mm wide (in print).\n\n'}>
-					<div className={'my-6 h-[315px] bg-white'}>
+					<div className={'my-6 bg-white md:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/symbol_minimum_size.svg'}
@@ -247,7 +247,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Token'}
 					description={'Our full-color token symbol can also be used as our social avatar.'}>
-					<div className={'my-6 h-[315px] bg-white'}>
+					<div className={'my-6 bg-white md:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/token_symbol.svg'}
