@@ -2,7 +2,6 @@ import	React, {ReactElement}	from	'react';
 import	{motion}				from	'framer-motion';
 import	Image					from	'next/image';
 
-
 const variants = {
 	enter: {
 		y: 0,
@@ -31,7 +30,7 @@ function	Content({
 			<p className={'mt-4 whitespace-pre-line text-neutral-500'}>{description}</p>
 			{children}
 			<div className={'flex flex-row items-center space-x-6'}>
-				<a href={srcScreen} download className={'h-10 w-[184px] border border-primary py-2 text-center font-bold text-primary'}>{'Download for Screen'}</a>
+				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Screen'}</a>
 			</div>
 		</motion.div>
 	);
@@ -47,11 +46,12 @@ function	Templates(): ReactElement {
 				{'Twitter'}
 			</h3>
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>
-				<Content>
-					<div className={'my-6 h-[680px]'}>
+				<Content
+					srcScreen={'/templates/twitter_pics.png'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/templates/twitter.png'}
+							src={'/templates/twitter_pics.png'}
 							width={1200}
 							height={680}
 							quality={90}

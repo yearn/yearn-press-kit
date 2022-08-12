@@ -97,7 +97,7 @@ function	Index(): ReactElement {
 					</DownloadButtons>
 				</Content>
 				<Content
-					title={'White logo on dark background'}
+					title={'Black logo on white background'}
 					description={'In cases where the logo cannot be printed in full colour\nuse the black logo version.'}>
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
@@ -119,7 +119,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Clearspace'}
 					description={'Our logo should always be prominent and legible. The clear space exists to prevent other elements from being placed too close.\nClear space is equal to x1 Yearn symbol.'}>
-					<div className={'my-6 md:h-[315px]'}>
+					<div className={'mt-6 md:my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_clearspace.svg'}
@@ -133,7 +133,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Minimum size'}
 					description={'The minimum recommended size of the logo is 85 pixels wide (on screen) or 30mm wide (in print).\n​'}>
-					<div className={'my-6 md:h-[315px]'}>
+					<div className={'mt-6 md:my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_minimum_size.svg'}
@@ -212,7 +212,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Clearspace'}
 					description={'Our symbol should always be prominent and legible. The clear space exists to prevent other elements from being placed too close.\nClear space is equal to x1 Yearn symbol.'}>
-					<div className={'my-6 bg-white md:h-[315px]'}>
+					<div className={'mt-6 md:my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/symbol_clearspace.svg'}
@@ -226,7 +226,7 @@ function	Index(): ReactElement {
 				<Content
 					title={'Minimum size'}
 					description={'The minimum recommended size of the symbol is 40 pixels wide (on screen) or 15mm wide (in print).\n\n'}>
-					<div className={'my-6 bg-white md:h-[315px]'}>
+					<div className={'mt-6 md:my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/symbol_minimum_size.svg'}

@@ -2,7 +2,6 @@ import	React, {ReactElement}	from	'react';
 import	{motion}				from	'framer-motion';
 import	Image					from	'next/image';
 
-
 const variants = {
 	enter: {
 		y: 0,
@@ -42,7 +41,7 @@ function	StraplineSignOffs(): ReactElement {
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>
 				<Content
 					description={'This is our strapline, we use it for the majority of messaging.'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/straplines-and-signoffs/straline.png'}
@@ -56,7 +55,7 @@ function	StraplineSignOffs(): ReactElement {
 
 				<Content
 					description={'A flexible sign-off can house bespoke messaging when needing to talk about specific product points or target different audiences.'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/straplines-and-signoffs/sign_off.png'}

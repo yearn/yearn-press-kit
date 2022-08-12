@@ -46,7 +46,7 @@ function	Typography(): ReactElement {
 			<div className={'grid grid-cols-1 gap-x-20 pb-6 md:grid-cols-2'}>
 				<Content
 					description={'Aeonik is our primary typeface and is used in both headlines and body copy. It is purposeful, elegant and timeless in design.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/aeonik.svg'}
@@ -59,7 +59,7 @@ function	Typography(): ReactElement {
 				</Content>
 				<Content
 					description={'Aeonik Fono is our supporting typeface and can be used in sign-offs, headlines and numeral use. Do not set long paragraphs or body copy in Fono.'}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/aeonik_fono.svg'}
@@ -74,7 +74,7 @@ function	Typography(): ReactElement {
 
 				<Content
 					description={'Aeonik Mono is our supporting typeface and can be used in web applications, in particular, numerals set in Mono work very well. '}>
-					<div className={'my-6 h-[315px]'}>
+					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/aeonik_mono.svg'}
@@ -90,7 +90,7 @@ function	Typography(): ReactElement {
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>
 				<Content
 					description={'Aeonik can be set in a variety of weights and cases to create visual interest in our messaging, all underpinned by a consistent sign-off.'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/promo_1.png'}
@@ -104,7 +104,7 @@ function	Typography(): ReactElement {
 
 				<Content
 					description={'Web app using Aeonik Mono for numerals'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/ui.png'}
@@ -118,7 +118,7 @@ function	Typography(): ReactElement {
 
 				<Content
 					description={'Single line sub-brands or titles using the Yearn logo and Aeonik Fono'}>
-					<div className={'my-6 h-[680px] border bg-black'}>
+					<div className={'my-6 md:h-[680px] border bg-black'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/promo_2.png'}
@@ -131,7 +131,7 @@ function	Typography(): ReactElement {
 				</Content>
 
 				<Content>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/promo_3.png'}

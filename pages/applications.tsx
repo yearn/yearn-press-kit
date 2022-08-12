@@ -42,7 +42,7 @@ function	Applications(): ReactElement {
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>
 				<Content
 					description={'Events (Look and Feel)'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/applications/YEARN_EVENT_WEB_1.png'}
@@ -56,7 +56,7 @@ function	Applications(): ReactElement {
 
 				<Content
 					description={'Merch (Look and Feel)'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/applications/YEARN_MERCH_1_2.png'}
@@ -70,7 +70,7 @@ function	Applications(): ReactElement {
 
 				<Content
 					description={'Merch (Look and Feel)'}>
-					<div className={'my-6 h-[680px]'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/applications/YEARN_MERCH_2_2.png'}
