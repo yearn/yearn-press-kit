@@ -42,3 +42,35 @@ body {@apply text-neutral-900;}
 	}
 
 }
+
+
+.mobile-nav-item {
+	@apply flex flex-col items-start justify-between rounded bg-good-ol-grey-100;
+	& > p {
+		@apply p-2 text-base font-bold text-neutral-900;
+	}
+}
+
+.mobile-nav-item {
+	@apply flex flex-col items-start justify-between cursor-pointer px-4;
+	&[aria-selected="true"] {
+		& > p {
+			@apply p-2 text-base text-primary;
+		}
+		& > div {
+			@apply h-0.5 w-full bg-primary;
+		}
+	}
+	&[aria-selected="false"] {
+		& > p {
+			@apply pb-2 text-base text-neutral-900;
+		}
+		& > div {
+			@apply h-0.5 w-full bg-transparent transition-colors;
+		}
+		&:hover > div {
+			@apply bg-neutral-400;
+		}
+	}
+
+}
