@@ -1,4 +1,4 @@
-import	React, {ReactElement}	from	'react';
+import	React, {ReactElement, ReactNode}	from	'react';
 import	{motion}				from	'framer-motion';
 import	Image					from	'next/image';
 
@@ -14,11 +14,17 @@ const variants = {
 	initial: {y: 60, opacity: 0}
 };
 
+type TContent = {
+	title: string;
+	description: string;
+	children: ReactNode;
+}
+
 function	Content({
 	title = '',
 	description = '',
-	children = <div />
-}): ReactElement {
+	children
+}: TContent): ReactElement {
 	return (
 		<motion.div
 			initial={'initial'}
@@ -42,9 +48,9 @@ function    DownloadButtons({
 			initial={'initial'}
 			whileInView={'enter'}>
 			<div className={'flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0'}>
-				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Screen'}</a>
-				<a href={srcPrint} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Print'}</a>
-				<a href={srcPng} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download PNG'}</a>
+				<a href={srcScreen} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download for Screen'}</a>
+				<a href={srcPrint} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download for Print'}</a>
+				<a href={srcPng} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download PNG'}</a>
 			</div>
 		</motion.div>
 	);
@@ -72,8 +78,7 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons					
 						srcScreen={'/downloads/YEARN_LOGO_BLUE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_LOGO_BLUE_CMYK.eps'}>
-					</DownloadButtons>
+						srcPrint={'/downloads/YEARN_LOGO_BLUE_CMYK.eps'} />
 				</Content>
 				<div />
 
@@ -93,8 +98,7 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_LOGO_WHITE_RGB.svg'}
-						srcPrint={'downloads/YEARN_LOGO_WHITE_CMYK.eps'}>
-					</DownloadButtons>
+						srcPrint={'downloads/YEARN_LOGO_WHITE_CMYK.eps'} />
 				</Content>
 				<Content
 					title={'Black logo on white background'}
@@ -111,8 +115,7 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_LOGO_BLACK_RGB.svg'}
-						srcPrint={'/downloads/YEARN_LOGO_BLACK_CMYK.eps'}>
-					</DownloadButtons>
+						srcPrint={'/downloads/YEARN_LOGO_BLACK_CMYK.eps'} />
 				</Content>
 
 
@@ -165,8 +168,7 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLUE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_BLUE_CMYK.eps'}>
-					</DownloadButtons>
+						srcPrint={'/downloads/YEARN_SYMBOL_BLUE_CMYK.eps'} />
 				</Content>
 				<div />
 
@@ -186,8 +188,7 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_WHITE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_WHITE_CMYK.eps'}>
-					</DownloadButtons>
+						srcPrint={'/downloads/YEARN_SYMBOL_WHITE_CMYK.eps'} />
 				</Content>
 				<Content
 					title={'Black symbol on white background'}
@@ -204,8 +205,7 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLACK_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_BLACK_CMYK.svg'}>
-					</DownloadButtons>
+						srcPrint={'/downloads/YEARN_SYMBOL_BLACK_CMYK.svg'} />
 				</Content>
 
 
@@ -258,8 +258,7 @@ function	Index(): ReactElement {
 							priority />
 					</div>
 					<DownloadButtons
-						srcScreen={'/downloads/YEARN_TOKEN_BLUE_RGB.svg'}>
-					</DownloadButtons>
+						srcScreen={'/downloads/YEARN_TOKEN_BLUE_RGB.svg'} />
 				</Content>
 				<Content
 					title={''}

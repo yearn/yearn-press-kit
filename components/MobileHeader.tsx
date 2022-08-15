@@ -6,7 +6,7 @@ import	{Card, ModalMobileMenu}				from	'@yearn-finance/web-lib/components';
 import	{Hamburger}							from	'@yearn-finance/web-lib/icons';
 import	LogoYearn							from	'components/icons/LogoYearn';
 
-function	NavbarMenuItem({option, selected}: NavbarTypes.TMenuItem): ReactElement {
+function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 	return (
 		<div className={'mobile-nav-item'}>
 			<p className={'font-bold'}>
@@ -21,14 +21,14 @@ function	MobileHeader({
 	selected,
 	set_selected,
 	wrapper
-}): ReactElement {
+}: any): ReactElement {
 	const	{chainID, isActive} = useWeb3();
 	const	[selectedOption, set_selectedOption] = React.useState(options[0]);
 	const	[hasMobileMenu, set_hasMobileMenu] = React.useState(false);
 
 
 	React.useEffect((): void => {
-		const	_selectedOption = options.find((e): boolean => e.value === Number(chainID)) || options[0];
+		const	_selectedOption = options.find((e: any): boolean => e.value === Number(chainID)) || options[0];
 		set_selectedOption(_selectedOption);
 	}, [chainID, isActive]);
 
@@ -51,7 +51,7 @@ function	MobileHeader({
 			<ModalMobileMenu
 				isOpen={hasMobileMenu}
 				onClose={(): void => set_hasMobileMenu(false)}>
-				{options.map((option): ReactElement  => {
+				{options.map((option: any): ReactElement  => {
 					if (wrapper) {
 						return (
 							<div key={option.route}>

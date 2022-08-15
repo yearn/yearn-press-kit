@@ -91,8 +91,7 @@ function	MyApp(props: AppProps): ReactElement {
 					selected={router.pathname}
 					set_selected={onChangeRoute}
 					options={navbarMenuOptions}
-					wrapper={<Link passHref href={''} />}>
-				</Header>
+					wrapper={<Link passHref href={''} />} />
 				<div id={'app'} className={'mx-auto mt-14 mb-0 max-w-6xl'}>
 					<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 						<motion.div

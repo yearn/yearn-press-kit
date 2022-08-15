@@ -1,5 +1,5 @@
 import React, {ReactElement} 				from 	'react';
-import type * as NavbarTypes 				from 	'./Navbar.d';
+import type * as NavbarTypes 				from 	'components/Navbar.d';
 import	{motion, useInView}					from	'framer-motion';
 import	Link								from	'next/link';
 import	Image								from	'next/image';
@@ -25,7 +25,7 @@ const variants = {
 	}
 };
 
-function	NavbarMenuItem({option, selected}: NavbarTypes.TMenuItem): ReactElement {
+function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 	return (
 		<div className={'header-nav-item'}>
 			<p>
@@ -40,20 +40,19 @@ function	Header({
 	selected,
 	set_selected,
 	children,
-	wrapper,
-	...props
+	wrapper
 }: NavbarTypes.TNavbar): ReactElement {
 	const	ref = React.useRef(null);
 	const	isInView = useInView(ref);
 
 	return (
-		<div {...props}>
+		<>
 			<MobileHeader
 				selected={selected}
 				set_selected={set_selected}
 				options={options}
 				wrapper={wrapper} />
-			<header className={'h-full w-full bg-neutral-100 h-screen md:h-[728px]'}>
+			<header className={'h-full w-full bg-neutral-100 md:h-[728px]'}>
 				<div className={'flex h-full w-full flex-col items-center px-4 pt-8 pb-0'}>
 					<Link href={'/'} scroll={false}>
 						<div className={'cursor-pointer'}>
@@ -83,46 +82,44 @@ function	Header({
 			</header>
 			<div
 				aria-label={'desktop-navigation'}
-				className={'hidden flex-col md:flex'}>
-				<div className={'sticky top-0 z-50 mt-auto bg-neutral-100 pt-6'}>
-					<nav className={'mx-auto flex  max-w-6xl flex-row items-center justify-between'}>
-						<div>
-							<Link href={'/'} scroll={false}>
-								<motion.div
-									initial={'initial'}
-									animate={isInView ? 'initial' : 'enter'}
-									className={'cursor-pointer pb-3.5'}
-									variants={variants}>
-									<LogoYearn />
-								</motion.div>
-							</Link>
-						</div>
-						{options.map((option): ReactElement  => {
-							if (wrapper) {
-								return (
-									<div key={option.route}>
-										{React.cloneElement(
-											wrapper,
-											{href: option.route},
-											<a><NavbarMenuItem option={option} selected={selected} /></a>
-										)}
-									</div>
-								);
-							}
+				className={'sticky top-0 z-50 mt-auto hidden flex-col bg-neutral-100 pt-6 md:flex'}>
+				<nav className={'mx-auto flex  max-w-6xl flex-row items-center justify-between'}>
+					<div>
+						<Link href={'/'} scroll={false}>
+							<motion.div
+								initial={'initial'}
+								animate={isInView ? 'initial' : 'enter'}
+								className={'cursor-pointer pb-3.5'}
+								variants={variants}>
+								<LogoYearn />
+							</motion.div>
+						</Link>
+					</div>
+					{options.map((option: NavbarTypes.TNavbarOption): ReactElement  => {
+						if (wrapper) {
 							return (
-								<div
-									key={option.route}
-									onClick={(): void => set_selected(option.route)}
-									className={'space-y-2'}>
-									<NavbarMenuItem option={option} selected={selected} />
+								<div key={option.route}>
+									{React.cloneElement(
+										wrapper,
+										{href: option.route},
+										<a><NavbarMenuItem option={option} selected={selected} /></a>
+									)}
 								</div>
 							);
-						})}
-					</nav>
-					{children}
-				</div>
+						}
+						return (
+							<div
+								key={option.route}
+								onClick={(): void => set_selected(option.route)}
+								className={'space-y-2'}>
+								<NavbarMenuItem option={option} selected={selected} />
+							</div>
+						);
+					})}
+				</nav>
+				{children}
 			</div>
-		</div>
+		</>
 	);
 }
 

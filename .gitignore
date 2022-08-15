@@ -25,7 +25,7 @@ pnpm-debug.log*
 .env
 .next
 .vercel
-.tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo
 
 **/public/sw*
 **/public/workbox*
