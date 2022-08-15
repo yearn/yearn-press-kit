@@ -1,9 +1,10 @@
-import	React, {ReactElement}				from	'react';
+import React, {ReactElement} 				from 	'react';
+import type * as NavbarTypes 				from 	'./Navbar.d';
+import	{motion, useInView}					from	'framer-motion';
 import	Link								from	'next/link';
 import	Image								from	'next/image';
-import	{useRouter}							from	'next/router';
-import	{motion, useInView}					from	'framer-motion';
 import	LogoYearn							from	'components/icons/LogoYearn';
+import	MobileHeader						from	'components/MobileHeader';
 
 const variants = {
 	enter: {
@@ -24,14 +25,35 @@ const variants = {
 	}
 };
 
-function	Header(): ReactElement {
-	const	router = useRouter();
+function	NavbarMenuItem({option, selected}: NavbarTypes.TMenuItem): ReactElement {
+	return (
+		<div className={'header-nav-item'}>
+			<p>
+				{option.label}
+			</p>
+		</div>
+	);
+}
+
+function	Header({
+	options,
+	selected,
+	set_selected,
+	children,
+	wrapper,
+	...props
+}: NavbarTypes.TNavbar): ReactElement {
 	const	ref = React.useRef(null);
 	const	isInView = useInView(ref);
 
 	return (
-		<>
-			<header className={'h-[728px] w-full bg-neutral-100'}>
+		<div {...props}>
+			<MobileHeader
+				selected={selected}
+				set_selected={set_selected}
+				options={options}
+				wrapper={wrapper} />
+			<header className={'h-full w-full bg-neutral-100 h-screen md:h-[728px]'}>
 				<div className={'flex h-full w-full flex-col items-center px-4 pt-8 pb-0'}>
 					<Link href={'/'} scroll={false}>
 						<div className={'cursor-pointer'}>
@@ -59,75 +81,49 @@ function	Header(): ReactElement {
 					</div>
 				</div>
 			</header>
-			<div className={'sticky top-0 z-50 mt-auto bg-neutral-100 pt-6'}>
-				<nav className={'mx-auto flex w-full max-w-6xl flex-row items-center justify-between'}>
-					<div>
-						<Link href={'/'} scroll={false}>
-							<motion.div
-								initial={'initial'}
-								animate={isInView ? 'initial' : 'enter'}
-								className={'cursor-pointer pb-3.5'}
-								variants={variants}>
-								<LogoYearn />
-							</motion.div>
-						</Link>
-					</div>
-					<div className={'flex flex-row items-center justify-center'}>
-						<Link href={'/'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/'}>
-								<p>{'Logo & Symbols'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/colors'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/colors'}>
-								<p>{'Colors'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/typography'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/typography'}>
-								<p>{'Typography'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/strapline-sign-offs'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/strapline-sign-offs'}>
-								<p>{'Straplines & Sign-offs'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/frames'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/frames'}>
-								<p>{'Frames'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/templates'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/templates'}>
-								<p>{'Templates'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/tone-of-voice'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/tone-of-voice'}>
-								<p>{'Tone of Voice'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/applications'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/applications'}>
-								<p>{'Applications'}</p>
-								<div />
-							</div>
-						</Link>
-					</div>
-					<div className={'w-16'} />
-				</nav>
+			<div
+				aria-label={'desktop-navigation'}
+				className={'hidden flex-col md:flex'}>
+				<div className={'sticky top-0 z-50 mt-auto bg-neutral-100 pt-6'}>
+					<nav className={'mx-auto flex  max-w-6xl flex-row items-center justify-between'}>
+						<div>
+							<Link href={'/'} scroll={false}>
+								<motion.div
+									initial={'initial'}
+									animate={isInView ? 'initial' : 'enter'}
+									className={'cursor-pointer pb-3.5'}
+									variants={variants}>
+									<LogoYearn />
+								</motion.div>
+							</Link>
+						</div>
+						{options.map((option): ReactElement  => {
+							if (wrapper) {
+								return (
+									<div key={option.route}>
+										{React.cloneElement(
+											wrapper,
+											{href: option.route},
+											<a><NavbarMenuItem option={option} selected={selected} /></a>
+										)}
+									</div>
+								);
+							}
+							return (
+								<div
+									key={option.route}
+									onClick={(): void => set_selected(option.route)}
+									className={'space-y-2'}>
+									<NavbarMenuItem option={option} selected={selected} />
+								</div>
+							);
+						})}
+					</nav>
+					{children}
+				</div>
 			</div>
-		</>
+		</div>
 	);
 }
-
 
 export default Header;
