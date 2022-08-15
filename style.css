@@ -9,7 +9,7 @@
 * {@apply font-aeonik;}
 body {@apply text-neutral-900;}
 #app {
-	@apply scroll-mt-28
+	@apply scroll-mt-28;
 }
 
 .header-nav-item {

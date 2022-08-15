@@ -68,10 +68,6 @@ function	MyApp(props: AppProps): ReactElement {
 		}
 	}
 
-	function	onChangeRoute(selected: string): void {
-		router.push(selected);
-	}
-
 	return (
 		<WithYearn
 			options={{
@@ -89,9 +85,8 @@ function	MyApp(props: AppProps): ReactElement {
 				<Meta />
 				<Header
 					selected={router.pathname}
-					set_selected={onChangeRoute}
 					options={navbarMenuOptions}
-					wrapper={<Link passHref href={''} />} />
+					wrapper={<Link passHref href={''} scroll={false} />} />
 				<div id={'app'} className={'mx-auto mt-14 mb-0 max-w-6xl'}>
 					<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 						<motion.div

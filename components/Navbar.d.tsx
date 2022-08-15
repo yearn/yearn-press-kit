@@ -13,7 +13,7 @@ export type TNavbar = {
 	logo?: ReactElement;
 	title?: string;
 	selected: string;
-	set_selected: React.Dispatch<React.SetStateAction<string>> | ((option: string) => void);
+	set_selected?: React.Dispatch<React.SetStateAction<string>> | ((option: string) => void);
 	children?: ReactElement;
 	wrapper: ReactElement;
 }

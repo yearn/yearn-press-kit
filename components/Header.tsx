@@ -83,7 +83,7 @@ function	Header({
 			<div
 				aria-label={'desktop-navigation'}
 				className={'sticky top-0 z-50 mt-auto hidden flex-col bg-neutral-100 pt-6 md:flex'}>
-				<nav className={'mx-auto flex  max-w-6xl flex-row items-center justify-between'}>
+				<nav className={'mx-auto flex w-full max-w-6xl flex-row items-center justify-between'}>
 					<div>
 						<Link href={'/'} scroll={false}>
 							<motion.div
@@ -95,8 +95,8 @@ function	Header({
 							</motion.div>
 						</Link>
 					</div>
-					{options.map((option: NavbarTypes.TNavbarOption): ReactElement  => {
-						if (wrapper) {
+					<div className={'flex w-full flex-row items-center justify-center'}>
+						{options.map((option: NavbarTypes.TNavbarOption): ReactElement  => {
 							return (
 								<div key={option.route}>
 									{React.cloneElement(
@@ -106,16 +106,8 @@ function	Header({
 									)}
 								</div>
 							);
-						}
-						return (
-							<div
-								key={option.route}
-								onClick={(): void => set_selected(option.route)}
-								className={'space-y-2'}>
-								<NavbarMenuItem option={option} selected={selected} />
-							</div>
-						);
-					})}
+						})}
+					</div>
 				</nav>
 				{children}
 			</div>
