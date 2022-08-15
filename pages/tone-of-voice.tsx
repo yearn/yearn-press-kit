@@ -18,7 +18,6 @@ function	Content({
 	title = '',
 	description = '',
 	srcScreen = '',
-	srcPrint = '',
 	children = <div />
 }): ReactElement {
 	return (

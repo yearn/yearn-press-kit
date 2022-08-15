@@ -1,9 +1,11 @@
 import	React, {ReactElement}				from	'react';
 import	{AppProps}							from	'next/app';
+import	Link								from	'next/link';
 import	{AnimatePresence, motion}			from	'framer-motion';
 import	{WithYearn}							from	'@yearn-finance/web-lib/contexts';
 import	Meta								from	'components/Meta';
 import	Header								from	'components/Header';
+
 
 import	'../style.css';
 
@@ -16,11 +18,58 @@ const variants = {
 
 function	MyApp(props: AppProps): ReactElement {
 	const	{Component, router, pageProps} = props;
+
+	const		navbarMenuOptions = [
+		{
+			route: '/',
+			values: ['/'],
+			label: 'Logo & Symbols'
+		},
+		{
+			route: '/colors',
+			values: ['/colors'],
+			label: 'Colors'
+		},
+		{
+			route: '/typography',
+			values: ['/typography'],
+			label: 'Typography'
+		},
+		{
+			route: '/straplines-sign-offs',
+			values: ['/straplines-sign-offs'],
+			label: 'Straplines & Sign-offs'
+		},
+		{
+			route: '/frames',
+			values: ['/frames'],
+			label: 'Frames'
+		},
+		{
+			route: '/templates',
+			values: ['/templates'],
+			label: 'Templates'
+		},
+		{
+			route: '/tone-of-voice',
+			values: ['/tone-of-voice'],
+			label: 'Templates'
+		},
+		{
+			route: '/applications',
+			values: ['/applications'],
+			label: 'Applications'
+		}
+	];
 	
 	function handleExitComplete(): void {
 		if (typeof window !== 'undefined') {
 			document.getElementById('app')?.scrollIntoView({behavior: 'smooth'});
 		}
+	}
+
+	function	onChangeRoute(selected: string): void {
+		router.push(selected);
 	}
 
 	return (
@@ -38,7 +87,12 @@ function	MyApp(props: AppProps): ReactElement {
 			}}>
 			<React.Fragment>
 				<Meta />
-				<Header />
+				<Header
+					selected={router.pathname}
+					set_selected={onChangeRoute}
+					options={navbarMenuOptions}
+					wrapper={<Link passHref href={''} />}>
+				</Header>
 				<div id={'app'} className={'mx-auto mt-14 mb-0 max-w-6xl'}>
 					<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 						<motion.div

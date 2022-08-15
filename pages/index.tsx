@@ -264,7 +264,7 @@ function	Index(): ReactElement {
 				<Content
 					title={''}
 					description={''}>
-					<div className={'mt-20 mb-6 h-[315px] bg-white'}>
+					<div className={'mb-6 md:mt-20 md:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/token_symbol_grid.svg'}

@@ -118,7 +118,7 @@ function	Typography(): ReactElement {
 
 				<Content
 					description={'Single line sub-brands or titles using the Yearn logo and Aeonik Fono'}>
-					<div className={'my-6 md:h-[680px] border bg-black'}>
+					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/typography/promo_2.png'}
