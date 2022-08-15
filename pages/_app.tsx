@@ -36,8 +36,8 @@ function	MyApp(props: AppProps): ReactElement {
 			label: 'Typography'
 		},
 		{
-			route: '/straplines-sign-offs',
-			values: ['/straplines-sign-offs'],
+			route: '/strapline-sign-offs',
+			values: ['/strapline-sign-offs'],
 			label: 'Straplines & Sign-offs'
 		},
 		{
@@ -53,7 +53,7 @@ function	MyApp(props: AppProps): ReactElement {
 		{
 			route: '/tone-of-voice',
 			values: ['/tone-of-voice'],
-			label: 'Templates'
+			label: 'Tone of Voice'
 		},
 		{
 			route: '/applications',
