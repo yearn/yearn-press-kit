@@ -2,6 +2,7 @@ import React, {ReactElement} 				from 	'react';
 import type * as NavbarTypes 				from 	'components/Navbar.d';
 import	{motion, useInView}					from	'framer-motion';
 import	Link								from	'next/link';
+import	{useRouter}							from	'next/router';
 import	Image								from	'next/image';
 import	LogoYearn							from	'components/icons/LogoYearn';
 import	MobileHeader						from	'components/MobileHeader';
@@ -25,24 +26,25 @@ const variants = {
 	}
 };
 
-function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
+function	NavbarMenuItem({option, isSelected}: NavbarTypes.TMenuItem): ReactElement {
 	return (
-		<div className={'header-nav-item'}>
-			<p>
+		<div className={'header-nav-item'} aria-selected={isSelected}>
+			<p className={'hover-fix'} title={option.label} >
 				{option.label}
 			</p>
+			<div />
 		</div>
 	);
 }
 
 function	Header({
 	options,
-	selected,
 	children,
 	wrapper
 }: NavbarTypes.TNavbar): ReactElement {
 	const	ref = React.useRef(null);
 	const	isInView = useInView(ref);
+	const	router = useRouter();
 
 	return (
 		<>
@@ -99,7 +101,7 @@ function	Header({
 									{React.cloneElement(
 										wrapper,
 										{href: option.route},
-										<a><NavbarMenuItem option={option} selected={selected} /></a>
+										<a><NavbarMenuItem option={option} isSelected={router.pathname === option.route} /></a>
 									)}
 								</div>
 							);

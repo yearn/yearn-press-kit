@@ -19,5 +19,5 @@ export type TNavbar = {
 
 export type TMenuItem = {
 	option: TNavbarOption;
-	selected: string;
+	isSelected: boolean;
 }
