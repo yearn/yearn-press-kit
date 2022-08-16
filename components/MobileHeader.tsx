@@ -16,12 +16,7 @@ function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 	);
 }
 
-function	MobileHeader({
-	options,
-	selected,
-	set_selected,
-	wrapper
-}: any): ReactElement {
+function	MobileHeader({options, wrapper}: any): ReactElement {
 	const	{chainID, isActive} = useWeb3();
 	const	[selectedOption, set_selectedOption] = React.useState(options[0]);
 	const	[hasMobileMenu, set_hasMobileMenu] = React.useState(false);
@@ -30,11 +25,11 @@ function	MobileHeader({
 	React.useEffect((): void => {
 		const	_selectedOption = options.find((e: any): boolean => e.value === Number(chainID)) || options[0];
 		set_selectedOption(_selectedOption);
-	}, [chainID, isActive]);
+	}, [chainID, isActive, options]);
 
 	return (
-		<div className={'absolute top-0 z-30 w-full p-4 md:hidden'}>
-			<Card className={'flex h-auto items-center justify-between md:h-20'}>
+		<div className={'sticky top-0 z-30 w-full p-0 md:hidden'}>
+			<Card className={'flex h-auto items-center justify-between !bg-neutral-100 md:h-20'}>
 				<div className={'flex w-full flex-row items-center'}>
 					<Link href={'/'} scroll={false}>
 						<div className={'cursor-pointer'}>
@@ -49,30 +44,22 @@ function	MobileHeader({
 				</div>
 			</Card>
 			<ModalMobileMenu
+				shouldUseWallets={false}
+				shouldUseNetworks={false}
 				isOpen={hasMobileMenu}
 				onClose={(): void => set_hasMobileMenu(false)}>
 				{options.map((option: any): ReactElement  => {
-					if (wrapper) {
-						return (
-							<div key={option.route}>
-								{React.cloneElement(
-									wrapper,
-									{href: option.route},
-									<a>
-										<NavbarMenuItem 
-											option={option} 
-											selected={selectedOption}/>
-									</a>
-								)}
-							</div>
-						);
-					}
 					return (
-						<div
-							key={option.route}
-							onClick={(): void => set_selected(option.route)}
-							className={'space-y-2'}>
-							<NavbarMenuItem option={option} selected={selected} />
+						<div key={option.route} onClick={(): void => set_hasMobileMenu(false)}>
+							{React.cloneElement(
+								wrapper,
+								{href: option.route},
+								<a>
+									<NavbarMenuItem 
+										option={option} 
+										selected={selectedOption}/>
+								</a>
+							)}
 						</div>
 					);
 				})}

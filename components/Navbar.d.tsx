@@ -1,4 +1,4 @@
-import	React, {ReactElement}	from	'react';
+import	{ReactElement}	from	'react';
 
 export type TNavbarOption = {
 	route: string;
@@ -13,7 +13,6 @@ export type TNavbar = {
 	logo?: ReactElement;
 	title?: string;
 	selected: string;
-	set_selected?: React.Dispatch<React.SetStateAction<string>> | ((option: string) => void);
 	children?: ReactElement;
 	wrapper: ReactElement;
 }
