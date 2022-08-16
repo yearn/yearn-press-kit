@@ -1,7 +1,6 @@
 import	React, {ReactElement}				from	'react';
 import type * as NavbarTypes 				from    './Navbar.d';
 import	Link								from	'next/link';
-import	{useWeb3}							from	'@yearn-finance/web-lib/contexts';
 import	{Card, ModalMobileMenu}				from	'@yearn-finance/web-lib/components';
 import	{Hamburger}							from	'@yearn-finance/web-lib/icons';
 import	LogoYearn							from	'components/icons/LogoYearn';
@@ -17,15 +16,7 @@ function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 }
 
 function	MobileHeader({options, wrapper}: any): ReactElement {
-	const	{chainID, isActive} = useWeb3();
-	const	[selectedOption, set_selectedOption] = React.useState(options[0]);
 	const	[hasMobileMenu, set_hasMobileMenu] = React.useState(false);
-
-
-	React.useEffect((): void => {
-		const	_selectedOption = options.find((e: any): boolean => e.value === Number(chainID)) || options[0];
-		set_selectedOption(_selectedOption);
-	}, [chainID, isActive, options]);
 
 	return (
 		<div className={'sticky top-0 z-30 w-full p-0 md:hidden'}>
