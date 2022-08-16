@@ -55,11 +55,11 @@ function	Header({
 			<header className={'h-full w-full bg-neutral-100 md:h-[728px]'}>
 				<div className={'flex h-full w-full flex-col items-center px-4 pt-8 pb-0'}>
 					<Link href={'/'} scroll={false}>
-						<div className={'cursor-pointer'}>
+						<div className={'hidden cursor-pointer md:flex'}>
 							<LogoYearn />
 						</div>
 					</Link>
-					<div ref={ref} className={'mt-[105px]'}>
+					<div ref={ref} className={'mt-0 md:mt-[105px]'}>
 						<h1 className={'mb-4 text-center text-7xl font-bold text-neutral-900'}>
 							{'Yearn Press Kit'}
 						</h1>

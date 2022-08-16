@@ -33,8 +33,8 @@ function	MobileHeader({
 	}, [chainID, isActive, options]);
 
 	return (
-		<div className={'absolute top-0 z-30 w-full p-4 md:hidden'}>
-			<Card className={'flex h-auto items-center justify-between md:h-20'}>
+		<div className={'sticky top-0 z-30 w-full p-0 md:hidden'}>
+			<Card className={'flex h-auto items-center justify-between !bg-neutral-100 md:h-20'}>
 				<div className={'flex w-full flex-row items-center'}>
 					<Link href={'/'} scroll={false}>
 						<div className={'cursor-pointer'}>
