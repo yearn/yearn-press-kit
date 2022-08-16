@@ -19,7 +19,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/aeonik.svg'}
+							src={'/typography/aeonik.png'}
 							width={560}
 							height={316}
 							quality={90} />
@@ -30,7 +30,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/aeonik_fono.svg'}
+							src={'/typography/aeonik_fono.png'}
 							width={560}
 							height={316}
 							quality={90} />
@@ -43,7 +43,7 @@ function	Typography(): ReactElement {
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
-							src={'/typography/aeonik_mono.svg'}
+							src={'/typography/aeonik_mono.png'}
 							width={560}
 							height={316}
 							quality={90} />
