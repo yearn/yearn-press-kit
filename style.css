@@ -13,17 +13,10 @@ body {@apply text-neutral-900;}
 }
 
 .header-nav-item {
-	@apply flex flex-col items-center justify-between;
-	& > p {
-		@apply pb-5 text-base font-normal text-neutral-900;
-	}
-}
-
-.header-nav-item {
 	@apply flex flex-col items-center justify-between cursor-pointer px-4;
 	&[aria-selected="true"] {
 		& > p {
-			@apply pb-5 text-base text-primary;
+			@apply pb-5 text-base text-primary font-bold;
 		}
 		& > div {
 			@apply h-0.5 w-full bg-primary;
@@ -36,11 +29,10 @@ body {@apply text-neutral-900;}
 		& > div {
 			@apply h-0.5 w-full bg-transparent transition-colors;
 		}
-		&:hover > div {
-			@apply bg-neutral-400;
+		&:hover > p {
+			@apply text-primary font-bold;
 		}
 	}
-
 }
 
 
@@ -73,4 +65,13 @@ body {@apply text-neutral-900;}
 		}
 	}
 
+}
+
+.hover-fix::before {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
