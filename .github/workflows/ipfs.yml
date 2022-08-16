@@ -2,7 +2,7 @@ name: IPFS
 
 on:
   push:
-    branches: ["main"]
+    branches: ["next"]
   workflow_dispatch:
 
 jobs:
