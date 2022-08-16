@@ -30,7 +30,7 @@ function	MobileHeader({
 	React.useEffect((): void => {
 		const	_selectedOption = options.find((e: any): boolean => e.value === Number(chainID)) || options[0];
 		set_selectedOption(_selectedOption);
-	}, [chainID, isActive]);
+	}, [chainID, isActive, options]);
 
 	return (
 		<div className={'absolute top-0 z-30 w-full p-4 md:hidden'}>
@@ -49,6 +49,8 @@ function	MobileHeader({
 				</div>
 			</Card>
 			<ModalMobileMenu
+				shouldUseWallets={false}
+				shouldUseNetworks={false}
 				isOpen={hasMobileMenu}
 				onClose={(): void => set_hasMobileMenu(false)}>
 				{options.map((option: any): ReactElement  => {
