@@ -53,7 +53,7 @@ jobs:
         with:
           tag_name: ${{ steps.ipfs.outputs.hash }}
           release_name: 'IPFS ${{ steps.ipfs.outputs.hash }}'
-          body: '[ipfs](ipfs://${{ steps.ipfs.outputs.hash }}) | [ipfs.io](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.hash }})'
+          body: 'ipfs://${{ steps.ipfs.outputs.hash }}) - [ipfs.io](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.hash }})'
 
 
 

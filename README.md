@@ -1,8 +1,6 @@
 # Yearn Press Kit
 ![](./public/og.png)
 
-![](.github/badges/ipfs.svg)
-
 A centralized asset bank for a decentralized brand.  
 Take the blue pill and enter the world of yearn.  
 
