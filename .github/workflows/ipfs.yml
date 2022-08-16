@@ -39,13 +39,6 @@ jobs:
           port: ${{ secrets.IPFS_PORT }}
           protocol: http
 
-      - uses: emibcn/badge-action@v1.2.1
-        with:
-          label: 'IPFS'
-          status: ${{ steps.ipfs.outputs.hash }}
-          color: '#0657F9'
-          path: '.github/badges/ipfs.svg'
-
       - name: Get Timestamp Action
         uses: nanzm/get-time-action@v1.1
         id: time
