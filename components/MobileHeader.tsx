@@ -57,7 +57,7 @@ function	MobileHeader({options, wrapper}: any): ReactElement {
 								<a>
 									<NavbarMenuItem 
 										option={option} 
-										selected={selectedOption}/>
+										isSelected={false} />
 								</a>
 							)}
 						</div>
