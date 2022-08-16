@@ -17,8 +17,8 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			fontSize: {
-				'3xl': ['32px', '40px']
+			backgroundColor: {
+				'light-blue': '#E7EFFF'
 			}
 		}
 	},

@@ -1,9 +1,11 @@
-import	React, {ReactElement}				from	'react';
-import	Link								from	'next/link';
-import	Image								from	'next/image';
-import	{useRouter}							from	'next/router';
+import React, {ReactElement} 				from 	'react';
+import type * as NavbarTypes 				from 	'components/Navbar.d';
 import	{motion, useInView}					from	'framer-motion';
+import	Link								from	'next/link';
+import	{useRouter}							from	'next/router';
+import	Image								from	'next/image';
 import	LogoYearn							from	'components/icons/LogoYearn';
+import	MobileHeader						from	'components/MobileHeader';
 
 const variants = {
 	enter: {
@@ -24,21 +26,39 @@ const variants = {
 	}
 };
 
-function	Header(): ReactElement {
-	const	router = useRouter();
+function	NavbarMenuItem({option, isSelected}: NavbarTypes.TMenuItem): ReactElement {
+	return (
+		<div className={'header-nav-item'} aria-selected={isSelected}>
+			<p className={'hover-fix'} title={option.label} >
+				{option.label}
+			</p>
+			<div />
+		</div>
+	);
+}
+
+function	Header({
+	options,
+	children,
+	wrapper
+}: NavbarTypes.TNavbar): ReactElement {
 	const	ref = React.useRef(null);
 	const	isInView = useInView(ref);
+	const	router = useRouter();
 
 	return (
 		<>
-			<header className={'h-[728px] w-full bg-neutral-100'}>
+			<MobileHeader
+				options={options}
+				wrapper={wrapper} />
+			<header className={'h-full w-full bg-neutral-100 md:h-[728px]'}>
 				<div className={'flex h-full w-full flex-col items-center px-4 pt-8 pb-0'}>
 					<Link href={'/'} scroll={false}>
-						<div className={'cursor-pointer'}>
+						<div className={'hidden cursor-pointer md:flex'}>
 							<LogoYearn />
 						</div>
 					</Link>
-					<div ref={ref} className={'mt-[105px]'}>
+					<div ref={ref} className={'mt-0 md:mt-[105px]'}>
 						<h1 className={'mb-4 text-center text-7xl font-bold text-neutral-900'}>
 							{'Yearn Press Kit'}
 						</h1>
@@ -50,7 +70,7 @@ function	Header(): ReactElement {
 					<div className={'flex w-full items-center justify-center'}>
 						<Image
 							objectFit={'contain'}
-							src={'/blue-pill.jpg'}
+							src={'/blue-pill.png'}
 							width={536}
 							height={348}
 							quality={90}
@@ -59,7 +79,9 @@ function	Header(): ReactElement {
 					</div>
 				</div>
 			</header>
-			<div className={'sticky top-0 z-50 mt-auto bg-neutral-100 pt-6'}>
+			<div
+				aria-label={'desktop-navigation'}
+				className={'sticky top-0 z-50 mt-auto hidden flex-col bg-neutral-100 pt-6 md:flex'}>
 				<nav className={'mx-auto flex w-full max-w-6xl flex-row items-center justify-between'}>
 					<div>
 						<Link href={'/'} scroll={false}>
@@ -72,62 +94,24 @@ function	Header(): ReactElement {
 							</motion.div>
 						</Link>
 					</div>
-					<div className={'flex flex-row items-center justify-center'}>
-						<Link href={'/'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/'}>
-								<p>{'Logo & Symbols'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/colors'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/colors'}>
-								<p>{'Colors'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/typography'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/typography'}>
-								<p>{'Typography'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/strapline-sign-offs'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/strapline-sign-offs'}>
-								<p>{'Straplines & Sign-offs'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/frames'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/frames'}>
-								<p>{'Frames'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/templates'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/templates'}>
-								<p>{'Templates'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/tone-of-voice'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/tone-of-voice'}>
-								<p>{'Tone of Voice'}</p>
-								<div />
-							</div>
-						</Link>
-						<Link href={'/applications'} scroll={false}>
-							<div className={'header-nav-item'} aria-selected={router.pathname === '/applications'}>
-								<p>{'Applications'}</p>
-								<div />
-							</div>
-						</Link>
+					<div className={'flex w-full flex-row items-center justify-center'}>
+						{options.map((option: NavbarTypes.TNavbarOption): ReactElement  => {
+							return (
+								<div key={option.route}>
+									{React.cloneElement(
+										wrapper,
+										{href: option.route},
+										<a><NavbarMenuItem option={option} isSelected={router.pathname === option.route} /></a>
+									)}
+								</div>
+							);
+						})}
 					</div>
-					<div className={'w-16'} />
 				</nav>
+				{children}
 			</div>
 		</>
 	);
 }
-
 
 export default Header;
