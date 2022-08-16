@@ -57,9 +57,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "${{ steps.time.outputs.time }} ${{ steps.ipfs.outputs.hash }}"
+          tag_name: "${{ steps.time.outputs.time }}/${{ steps.ipfs.outputs.hash }}"
           release_name: ${{ steps.ipfs.outputs.hash }}
-          body: 'ipfs://${{ steps.ipfs.outputs.hash }}) - [ipfs.io](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.hash }})'
+          body: '[ipfs://${{ steps.ipfs.outputs.hash }}](ipfs://${{ steps.ipfs.outputs.hash }}) - [ipfs.io](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.hash }})'
 
 
 
