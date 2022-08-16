@@ -1,0 +1,20 @@
+<svg width="355.4" height="20" viewBox="0 0 3554 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IPFS: QmUS3aHpvnwsfJndKL31HiaRfokJTaTTU73KZpKNLieqSi">
+  <title>IPFS: QmUS3aHpvnwsfJndKL31HiaRfokJTaTTU73KZpKNLieqSi</title>
+  <linearGradient id="a" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="m"><rect width="3554" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#m)">
+    <rect width="350" height="200" fill="#555"/>
+    <rect width="3204" height="200" fill="##0657F9" x="350"/>
+    <rect width="3554" height="200" fill="url(#a)"/>
+  </g>
+  <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="250" fill="#000" opacity="0.25">IPFS</text>
+    <text x="50" y="138" textLength="250">IPFS</text>
+    <text x="405" y="148" textLength="3104" fill="#000" opacity="0.25">QmUS3aHpvnwsfJndKL31HiaRfokJTaTTU73KZpKNLieqSi</text>
+    <text x="395" y="138" textLength="3104">QmUS3aHpvnwsfJndKL31HiaRfokJTaTTU73KZpKNLieqSi</text>
+  </g>
+  
+</svg>
