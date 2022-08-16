@@ -20,7 +20,7 @@ function	ToneOfVoice(): ReactElement {
 							quality={90} />
 					</div>
 					<div className={'flex flex-row items-center space-x-6'}>
-						<a href={'TODO: NOT SET'} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download PDF'}</a>
+						<a href={'TODO: NOT SET'} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download PDF'}</a>
 					</div>
 				</ContentCard>
 			</div>

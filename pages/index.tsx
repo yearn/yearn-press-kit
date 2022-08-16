@@ -13,9 +13,9 @@ function    DownloadButtons({
 			initial={'initial'}
 			whileInView={'enter'}>
 			<div className={'flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0'}>
-				<a href={srcScreen} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download for Screen'}</a>
-				<a href={srcPrint} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download for Print'}</a>
-				<a href={srcPng} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download PNG'}</a>
+				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Screen'}</a>
+				<a href={srcPrint} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download for Print'}</a>
+				<a href={srcPng} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download PNG'}</a>
 			</div>
 		</motion.div>
 	);

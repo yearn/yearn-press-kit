@@ -16,12 +16,7 @@ function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 	);
 }
 
-function	MobileHeader({
-	options,
-	selected,
-	set_selected,
-	wrapper
-}: any): ReactElement {
+function	MobileHeader({options, wrapper}: any): ReactElement {
 	const	{chainID, isActive} = useWeb3();
 	const	[selectedOption, set_selectedOption] = React.useState(options[0]);
 	const	[hasMobileMenu, set_hasMobileMenu] = React.useState(false);
@@ -54,27 +49,17 @@ function	MobileHeader({
 				isOpen={hasMobileMenu}
 				onClose={(): void => set_hasMobileMenu(false)}>
 				{options.map((option: any): ReactElement  => {
-					if (wrapper) {
-						return (
-							<div key={option.route}>
-								{React.cloneElement(
-									wrapper,
-									{href: option.route},
-									<a>
-										<NavbarMenuItem 
-											option={option} 
-											selected={selectedOption}/>
-									</a>
-								)}
-							</div>
-						);
-					}
 					return (
-						<div
-							key={option.route}
-							onClick={(): void => set_selected(option.route)}
-							className={'space-y-2'}>
-							<NavbarMenuItem option={option} selected={selected} />
+						<div key={option.route} onClick={(): void => set_hasMobileMenu(false)}>
+							{React.cloneElement(
+								wrapper,
+								{href: option.route},
+								<a>
+									<NavbarMenuItem 
+										option={option} 
+										selected={selectedOption}/>
+								</a>
+							)}
 						</div>
 					);
 				})}

@@ -38,7 +38,6 @@ function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 function	Header({
 	options,
 	selected,
-	set_selected,
 	children,
 	wrapper
 }: NavbarTypes.TNavbar): ReactElement {
@@ -48,8 +47,6 @@ function	Header({
 	return (
 		<>
 			<MobileHeader
-				selected={selected}
-				set_selected={set_selected}
 				options={options}
 				wrapper={wrapper} />
 			<header className={'h-full w-full bg-neutral-100 md:h-[728px]'}>
