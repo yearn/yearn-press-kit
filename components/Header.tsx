@@ -32,6 +32,7 @@ function	NavbarMenuItem({option, isSelected}: NavbarTypes.TMenuItem): ReactEleme
 			<p className={'hover-fix'} title={option.label} >
 				{option.label}
 			</p>
+			<div />
 		</div>
 	);
 }
