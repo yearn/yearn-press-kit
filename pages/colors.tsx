@@ -344,7 +344,7 @@ function	Colors(): ReactElement {
 					</div>
 					<div className={'bg-disco-salmon-800 order-[19] h-[160px] px-5 py-4 text-white md:order-none'}>
 						<p>{'Disco Salmon 800'}</p>
-						<p>{'#99104f'}</p>
+						<p>{'#99104F'}</p>
 						<p>{'153.16.79'}</p>
 						<p>{'28.100.25.25'}</p>
 						<p>{'Pantone 220c'}</p>
@@ -367,7 +367,7 @@ function	Colors(): ReactElement {
 
 					<div className={'bg-metaverse-sunset-900 order-[10] h-[160px] px-5 py-4 text-white md:order-none'}>
 						<p>{'Metaverse Sunset 900'}</p>
-						<p>{'#8f0000'}</p>
+						<p>{'#8F0000'}</p>
 						<p>{'143.0.0'}</p>
 						<p>{'22.100.100.31'}</p>
 						<p>{'Pantone 187c'}</p>
