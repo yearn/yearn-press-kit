@@ -46,12 +46,18 @@ jobs:
           color: '#0657F9'
           path: '.github/badges/ipfs.svg'
 
+      - name: Get Timestamp Action
+        uses: nanzm/get-time-action@v1.1
+        id: time
+        with:
+          format: 'YYYY-MM-DD-HH-mm-ss'
+
       - name: Create Release
         uses: Hs1r1us/Release-AIO@v1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.ipfs.outputs.hash }}
+          tag_name: "${{ steps.time.outputs.time }} - ${{ steps.ipfs.outputs.hash }}"
           release_name: ${{ steps.ipfs.outputs.hash }}
           body: 'ipfs://${{ steps.ipfs.outputs.hash }}) - [ipfs.io](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.hash }})'
 
