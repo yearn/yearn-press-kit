@@ -48,9 +48,7 @@ function	Applications(): ReactElement {
 							src={'/applications/YEARN_EVENT_WEB_1.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -62,9 +60,7 @@ function	Applications(): ReactElement {
 							src={'/applications/YEARN_MERCH_1_2.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -76,9 +72,7 @@ function	Applications(): ReactElement {
 							src={'/applications/YEARN_MERCH_2_2.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 

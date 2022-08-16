@@ -72,9 +72,7 @@ function	Index(): ReactElement {
 							src={'/index/logo_primary.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons					
 						srcScreen={'/downloads/YEARN_LOGO_BLUE_RGB.svg'}
@@ -92,9 +90,7 @@ function	Index(): ReactElement {
 							src={'/index/logo_black_background.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_LOGO_WHITE_RGB.svg'}
@@ -109,9 +105,7 @@ function	Index(): ReactElement {
 							src={'/index/logo_white_background.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_LOGO_BLACK_RGB.svg'}
@@ -128,9 +122,7 @@ function	Index(): ReactElement {
 							src={'/index/logo_clearspace.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 				<Content
@@ -142,9 +134,7 @@ function	Index(): ReactElement {
 							src={'/index/logo_minimum_size.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -162,9 +152,7 @@ function	Index(): ReactElement {
 							src={'/index/symbol.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLUE_RGB.svg'}
@@ -182,9 +170,7 @@ function	Index(): ReactElement {
 							src={'/index/symbol_black_background.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_WHITE_RGB.svg'}
@@ -199,9 +185,7 @@ function	Index(): ReactElement {
 							src={'/index/symbol_white_background.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLACK_RGB.svg'}
@@ -218,9 +202,7 @@ function	Index(): ReactElement {
 							src={'/index/symbol_clearspace.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 				<Content
@@ -232,9 +214,7 @@ function	Index(): ReactElement {
 							src={'/index/symbol_minimum_size.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 	
@@ -253,9 +233,7 @@ function	Index(): ReactElement {
 							src={'/index/token_symbol.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_TOKEN_BLUE_RGB.svg'} />
@@ -269,9 +247,7 @@ function	Index(): ReactElement {
 							src={'/index/token_symbol_grid.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 

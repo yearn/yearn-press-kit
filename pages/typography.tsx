@@ -52,9 +52,7 @@ function	Typography(): ReactElement {
 							src={'/typography/aeonik.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 				<Content
@@ -65,9 +63,7 @@ function	Typography(): ReactElement {
 							src={'/typography/aeonik_fono.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -80,9 +76,7 @@ function	Typography(): ReactElement {
 							src={'/typography/aeonik_mono.svg'}
 							width={560}
 							height={316}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -96,9 +90,7 @@ function	Typography(): ReactElement {
 							src={'/typography/promo_1.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -110,9 +102,7 @@ function	Typography(): ReactElement {
 							src={'/typography/ui.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -124,9 +114,7 @@ function	Typography(): ReactElement {
 							src={'/typography/promo_2.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -137,9 +125,7 @@ function	Typography(): ReactElement {
 							src={'/typography/promo_3.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 

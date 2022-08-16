@@ -71,7 +71,7 @@ function	Header({
 					<div className={'flex w-full items-center justify-center'}>
 						<Image
 							objectFit={'contain'}
-							src={'/blue-pill.jpg'}
+							src={'/blue-pill.png'}
 							width={536}
 							height={348}
 							quality={90}

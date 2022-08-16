@@ -47,9 +47,7 @@ function	StraplineSignOffs(): ReactElement {
 							src={'/straplines-and-signoffs/straline.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
@@ -61,9 +59,7 @@ function	StraplineSignOffs(): ReactElement {
 							src={'/straplines-and-signoffs/sign_off.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 

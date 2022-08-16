@@ -30,7 +30,7 @@ function	Content({
 			<p className={'mt-4 whitespace-pre-line text-neutral-500'}>{description}</p>
 			{children}
 			<div className={'flex flex-row items-center space-x-6'}>
-				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download PDF'}</a>
+				<a href={srcScreen} download className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold md:w-[184px]'}>{'Download PDF'}</a>
 			</div>
 		</motion.div>
 	);
@@ -51,9 +51,7 @@ function	ToneOfVoice(): ReactElement {
 							src={'/tone-of-voice/tone_of_voice.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 
 					</div>
 				</Content>

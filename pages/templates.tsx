@@ -54,9 +54,7 @@ function	Templates(): ReactElement {
 							src={'/templates/twitter_pics.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 

@@ -47,9 +47,7 @@ function	Frames(): ReactElement {
 							src={'/frames/frames.png'}
 							width={1200}
 							height={680}
-							quality={90}
-							loading={'eager'}
-							priority />
+							quality={90} />
 					</div>
 				</Content>
 
