@@ -30,7 +30,7 @@ function	Content({
 			<p className={'mt-4 whitespace-pre-line text-neutral-500'}>{description}</p>
 			{children}
 			<div className={'flex flex-row items-center space-x-6'}>
-				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>{'Download PDF'}</a>
+				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary lg:w-[184px] lg:pt-3 lg:text-xs xl:py-2 xl:text-base'}>{'Download PDF'}</a>
 			</div>
 		</motion.div>
 	);
