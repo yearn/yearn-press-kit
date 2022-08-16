@@ -23,10 +23,11 @@ function	Templates(): ReactElement {
 					</div>
 					<div className={'flex flex-row items-center space-x-6'}>
 						<a
-							href={'/templates/twitter_pics.png'}
-							download
+							href={'https://www.figma.com/community/file/1138409921045069837'}
+							target={'_blank'}
+							rel={'noreferrer'}
 							className={'border-primary text-primary h-10 w-full border py-2 text-center font-bold hover:bg-light-blue lg:w-[184px] lg:pt-3 lg:text-xs xl:py-2 xl:text-base'}>
-							{'Download for Screen'}
+							{'Explore Figma files'}
 						</a>
 					</div>
 				</ContentCard>
