@@ -25,7 +25,7 @@ function	Templates(): ReactElement {
 						<a
 							href={'/templates/twitter_pics.png'}
 							download
-							className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary md:w-[184px]'}>
+							className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary hover:bg-light-blue lg:w-[184px] lg:pt-3 lg:text-xs xl:py-2 xl:text-base'}>
 							{'Download for Screen'}
 						</a>
 					</div>
