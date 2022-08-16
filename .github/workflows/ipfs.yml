@@ -46,29 +46,14 @@ jobs:
           color: '#0657F9'
           path: '.github/badges/ipfs.svg'
 
-      - name: Upload badge as artifact
-        uses: actions/upload-artifact@v3
+      - name: Create Release
+        uses: Hs1r1us/Release-AIO@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: badge
-          path: '.github/badges/ipfs.svg'
-          if-no-files-found: error
-
-      - name: Commit badge
-        continue-on-error: true
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add '.github/badges/ipfs.svg'
-          git commit -m "badge: update IPFS link"
-
-      - name: Push badge commit
-        uses: ad-m/github-push-action@master
-        if: ${{ success() }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'main'
-
-
+          tag_name: ${{ steps.ipfs.outputs.hash }}
+          release_name: 'IPFS ${{ steps.ipfs.outputs.hash }}'
+          body: 'ipfs://${{ steps.ipfs.outputs.hash }} | ipfs.io/ipfs/${{ steps.ipfs.outputs.hash }}'
 
 
 
