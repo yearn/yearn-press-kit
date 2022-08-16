@@ -1,25 +1,7 @@
 import	React, {ReactElement}	from	'react';
-import	{motion}				from	'framer-motion';
 import	Image					from	'next/image';
 import	ContentCard				from	'components/ContentCard';
-
-function    DownloadButtons({
-	srcScreen = '',
-	srcPrint = '',
-	srcPng = ''
-}): ReactElement {
-	return (
-		<motion.div
-			initial={'initial'}
-			whileInView={'enter'}>
-			<div className={'flex flex-col items-center space-y-4 lg:flex-row lg:space-x-6 lg:space-y-0'}>
-				<a href={srcScreen} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary lg:w-[184px] lg:pt-3 lg:text-xs xl:py-2 xl:text-base'}>{'Download for Screen'}</a>
-				<a href={srcPrint} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary lg:w-[184px] lg:pt-3 lg:text-xs xl:py-2 xl:text-base'}>{'Download for Print'}</a>
-				<a href={srcPng} download className={'h-10 w-full border border-primary py-2 text-center font-bold text-primary lg:w-[184px] lg:pt-3 lg:text-xs xl:py-2 xl:text-base'}>{'Download PNG'}</a>
-			</div>
-		</motion.div>
-	);
-}
+import	DownloadButtons				from	'components/DownloadButtons';
 
 function	Index(): ReactElement {
 	return (
@@ -41,7 +23,8 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons					
 						srcScreen={'/downloads/YEARN_LOGO_BLUE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_LOGO_BLUE_CMYK.eps'} />
+						srcPrint={'/downloads/YEARN_LOGO_BLUE_CMYK.eps'}
+						srcPng={'/downloads/YEARN_LOGO_BLUE_RGB.png'} />
 				</ContentCard>
 				<div />
 
@@ -59,7 +42,8 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_LOGO_WHITE_RGB.svg'}
-						srcPrint={'downloads/YEARN_LOGO_WHITE_CMYK.eps'} />
+						srcPrint={'downloads/YEARN_LOGO_WHITE_CMYK.eps'}
+						srcPng={'/downloads/YEARN_LOGO_WHITE_RGB.png'} />
 				</ContentCard>
 				<ContentCard
 					title={'Black logo on white background'}
@@ -74,7 +58,8 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_LOGO_BLACK_RGB.svg'}
-						srcPrint={'/downloads/YEARN_LOGO_BLACK_CMYK.eps'} />
+						srcPrint={'/downloads/YEARN_LOGO_BLACK_CMYK.eps'}
+						srcPng={'/downloads/YEARN_LOGO_BLACK_RGB.png'} />
 				</ContentCard>
 
 
@@ -121,7 +106,8 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLUE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_BLUE_CMYK.eps'} />
+						srcPrint={'/downloads/YEARN_SYMBOL_BLUE_CMYK.eps'}
+						srcPng={'/downloads/YEARN_SYMBOL_BLUE_RGB.png'} />
 				</ContentCard>
 				<div />
 
@@ -139,7 +125,8 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_WHITE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_WHITE_CMYK.eps'} />
+						srcPrint={'/downloads/YEARN_SYMBOL_WHITE_CMYK.eps'}
+						srcPng={'/downloads/YEARN_SYMBOL_WHITE_RGB.png'} />
 				</ContentCard>
 				<ContentCard
 					title={'Black symbol on white background'}
@@ -154,7 +141,8 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLACK_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_BLACK_CMYK.svg'} />
+						srcPrint={'/downloads/YEARN_SYMBOL_BLACK_CMYK.eps'}
+						srcPng={'/downloads/YEARN_SYMBOL_BLACK_RGB.png'} />
 				</ContentCard>
 
 
@@ -201,7 +189,9 @@ function	Index(): ReactElement {
 							quality={90} />
 					</div>
 					<DownloadButtons
-						srcScreen={'/downloads/YEARN_TOKEN_BLUE_RGB.svg'} />
+						srcScreen={'/downloads/YEARN_TOKEN_BLUE_RGB.svg'}
+						srcPrint={'/downloads/YEARN_TOKEN_BLUE_CMYK.eps'}
+						srcPng={'/downloads/YEARN_TOKEN_BLUE_RGB.png'} />
 				</ContentCard>
 				<ContentCard
 					title={''}
