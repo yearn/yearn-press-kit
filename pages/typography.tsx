@@ -1,36 +1,6 @@
 import	React, {ReactElement}	from	'react';
-import	{motion}				from	'framer-motion';
 import	Image					from	'next/image';
-
-const variants = {
-	enter: {
-		y: 0,
-		opacity: 1,
-		transition: {
-			duration: 0.5,
-			ease: 'linear'
-		}
-	},
-	initial: {y: 60, opacity: 0}
-};
-
-function	Content({
-	title = '',
-	description = '',
-	children = <div />
-}): ReactElement {
-	return (
-		<motion.div
-			initial={'initial'}
-			whileInView={'enter'}
-			className={'flex flex-col'}
-			variants={variants}>
-			<h3 className={'text-xl font-bold text-neutral-900'}>{title}</h3>
-			<p className={'mt-4 whitespace-pre-line text-neutral-500'}>{description}</p>
-			{children}
-		</motion.div>
-	);
-}
+import	ContentCard				from	'components/ContentCard';
 
 function	Typography(): ReactElement {
 	return (
@@ -44,7 +14,7 @@ function	Typography(): ReactElement {
 				</div>
 			</div>
 			<div className={'grid grid-cols-1 gap-x-20 pb-6 md:grid-cols-2'}>
-				<Content
+				<ContentCard
 					description={'Aeonik is our primary typeface and is used in both headlines and body copy. It is purposeful, elegant and timeless in design.'}>
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
@@ -54,8 +24,8 @@ function	Typography(): ReactElement {
 							height={316}
 							quality={90} />
 					</div>
-				</Content>
-				<Content
+				</ContentCard>
+				<ContentCard
 					description={'Aeonik Fono is our supporting typeface and can be used in sign-offs, headlines and numeral use. Do not set long paragraphs or body copy in Fono.'}>
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
@@ -65,10 +35,10 @@ function	Typography(): ReactElement {
 							height={316}
 							quality={90} />
 					</div>
-				</Content>
+				</ContentCard>
 
 
-				<Content
+				<ContentCard
 					description={'Aeonik Mono is our supporting typeface and can be used in web applications, in particular, numerals set in Mono work very well. '}>
 					<div className={'my-6 md:h-[315px]'}>
 						<Image
@@ -78,11 +48,11 @@ function	Typography(): ReactElement {
 							height={316}
 							quality={90} />
 					</div>
-				</Content>
+				</ContentCard>
 
 			</div>
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>
-				<Content
+				<ContentCard
 					description={'Aeonik can be set in a variety of weights and cases to create visual interest in our messaging, all underpinned by a consistent sign-off.'}>
 					<div className={'my-6 md:h-[680px]'}>
 						<Image
@@ -92,9 +62,9 @@ function	Typography(): ReactElement {
 							height={680}
 							quality={90} />
 					</div>
-				</Content>
+				</ContentCard>
 
-				<Content
+				<ContentCard
 					description={'Web app using Aeonik Mono for numerals'}>
 					<div className={'my-6 md:h-[680px]'}>
 						<Image
@@ -104,9 +74,9 @@ function	Typography(): ReactElement {
 							height={680}
 							quality={90} />
 					</div>
-				</Content>
+				</ContentCard>
 
-				<Content
+				<ContentCard
 					description={'Single line sub-brands or titles using the Yearn logo and Aeonik Fono'}>
 					<div className={'my-6 md:h-[680px]'}>
 						<Image
@@ -116,9 +86,9 @@ function	Typography(): ReactElement {
 							height={680}
 							quality={90} />
 					</div>
-				</Content>
+				</ContentCard>
 
-				<Content>
+				<ContentCard>
 					<div className={'my-6 md:h-[680px]'}>
 						<Image
 							objectFit={'contain'}
@@ -127,8 +97,7 @@ function	Typography(): ReactElement {
 							height={680}
 							quality={90} />
 					</div>
-				</Content>
-
+				</ContentCard>
 			</div>
 		</section>
 	);
