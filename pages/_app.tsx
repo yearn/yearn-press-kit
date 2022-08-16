@@ -6,7 +6,6 @@ import	{WithYearn}							from	'@yearn-finance/web-lib/contexts';
 import	Meta								from	'components/Meta';
 import	Header								from	'components/Header';
 
-
 import	'../style.css';
 
 const transition = {duration: 0.3, ease: [0.17, 0.67, 0.83, 0.67]};
@@ -71,15 +70,8 @@ function	MyApp(props: AppProps): ReactElement {
 	return (
 		<WithYearn
 			options={{
-				ui: {
-					shouldUseThemes: false
-				},
-				web3: {
-					shouldUseWallets: false,
-					shouldUseStrictChainMode: false,
-					defaultChainID: 1,
-					supportedChainID: [1, 1337, 31337]
-				}
+				ui: {shouldUseThemes: false},
+				web3: {shouldUseWallets: false}
 			}}>
 			<React.Fragment>
 				<Meta />

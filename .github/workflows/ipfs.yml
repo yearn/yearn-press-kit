@@ -40,6 +40,6 @@ jobs:
       - uses: emibcn/badge-action@v1.2.1
         with:
           label: 'IPFS'
-          status: ${{ steps.upload.outputs.hash }}
+          status: '123'
           color: '#0657F9'
           path: '.github/badges/ipfs.svg'
