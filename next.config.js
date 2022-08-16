@@ -9,7 +9,6 @@ module.exports = (phase) => withPWA({
 		}
 	},
 	assetPrefix: './',
-	basePath: phase === PHASE_EXPORT ? './' : '/',
 	images: {
 		domains: [
 			'rawcdn.githack.com',
