@@ -1,9 +1,9 @@
 import	React, {ReactElement}				from	'react';
-import type * as NavbarTypes 				from    './Navbar.d';
 import	Link								from	'next/link';
 import	{Card, ModalMobileMenu}				from	'@yearn-finance/web-lib/components';
 import	{Hamburger}							from	'@yearn-finance/web-lib/icons';
 import	LogoYearn							from	'components/icons/LogoYearn';
+import type * as NavbarTypes 				from    'components/Navbar.d';
 
 function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 	return (
