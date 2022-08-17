@@ -5,7 +5,7 @@ const {PHASE_EXPORT} = require('next/constants');
 module.exports = (phase) => withPWA({
 	experimental: {
 		images: {
-			unoptimized: phase === PHASE_EXPORT //Exporting image does not support optimization
+			unoptimized: process.env.IPFS_BUILD === 'true' || phase === PHASE_EXPORT //Exporting image does not support optimization
 		}
 	},
 	assetPrefix: './',
@@ -16,7 +16,8 @@ module.exports = (phase) => withPWA({
 		]
 	},
 	pwa: {
-		dest: 'public'
+		dest: 'public',
+		disable: process.env.NODE_ENV === 'development'
 	},
 	env: {
 		/* 🔵 - Yearn Finance **************************************************

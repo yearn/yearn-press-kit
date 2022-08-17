@@ -27,5 +27,5 @@ pnpm-debug.log*
 .vercel
 tsconfig.tsbuildinfo
 
-**/public/sw*
-**/public/workbox*
+**/public/sw*.map
+**/public/workbox*.map
