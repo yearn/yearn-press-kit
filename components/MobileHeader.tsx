@@ -15,7 +15,7 @@ function	NavbarMenuItem({option}: NavbarTypes.TMenuItem): ReactElement {
 	);
 }
 
-function	MobileHeader({options, wrapper}: any): ReactElement {
+function	MobileHeader({options, wrapper}: NavbarTypes.TNavbar): ReactElement {
 	const	[hasMobileMenu, set_hasMobileMenu] = React.useState(false);
 
 	return (
@@ -39,7 +39,7 @@ function	MobileHeader({options, wrapper}: any): ReactElement {
 				shouldUseNetworks={false}
 				isOpen={hasMobileMenu}
 				onClose={(): void => set_hasMobileMenu(false)}>
-				{options.map((option: any): ReactElement  => {
+				{options.map((option: NavbarTypes.TNavbarOption): ReactElement  => {
 					return (
 						<div key={option.route} onClick={(): void => set_hasMobileMenu(false)}>
 							{React.cloneElement(
