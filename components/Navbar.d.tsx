@@ -12,7 +12,7 @@ export type TNavbar = {
 	options: TNavbarOption[];
 	logo?: ReactElement;
 	title?: string;
-	selected: string;
+	selected?: string;
 	children?: ReactElement;
 	wrapper: ReactElement;
 }
