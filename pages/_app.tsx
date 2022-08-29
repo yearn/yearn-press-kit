@@ -5,6 +5,7 @@ import	{AnimatePresence, motion}			from	'framer-motion';
 import	{WithYearn}							from	'@yearn-finance/web-lib/contexts';
 import	Meta								from	'components/Meta';
 import	Header								from	'components/Header';
+import	{Toaster}						from	'react-hot-toast';
 
 import	'../style.css';
 
@@ -79,6 +80,7 @@ function	MyApp(props: AppProps): ReactElement {
 					selected={router.pathname}
 					options={navbarMenuOptions}
 					wrapper={<Link passHref href={''} scroll={false} />} />
+				<Toaster />
 				<div id={'app'} className={'mx-auto mt-14 mb-0 max-w-6xl'}>
 					<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 						<motion.div
