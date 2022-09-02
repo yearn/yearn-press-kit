@@ -27,5 +27,7 @@ pnpm-debug.log*
 .vercel
 tsconfig.tsbuildinfo
 
-**/public/sw*.map
-**/public/workbox*.map
+# Auto Generated PWA files
+**/public/workbox-*.js
+**/public/sw.js
+**/public/worker-*.js
