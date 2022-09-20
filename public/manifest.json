@@ -2,7 +2,7 @@
 	"name": "Yearn Press Kit",
 	"short_name": "yPress",
 	"description": "A centralized asset bank for a decentralized brand. Take the blue pill and enter the world of yearn.",
-	"iconPath": "./favicons/apple-icon.png",
+	"iconPath": "./favicons/favicon.svg",
 	"locale": "en-US",
 	"uri": "https://presskit.yearn.farm/",
 	"og": "https://presskit.yearn.farm/og.png",
