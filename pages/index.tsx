@@ -13,8 +13,9 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Primary Logo'}
 					description={'Our default, full-color landscape logo only ever appears\non white background.'}>
-					<div className={'my-6 lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
+							style={{backgroundColor: 'white'}}
 							objectFit={'contain'}
 							src={'/index/logo_primary.svg'}
 							width={560}
@@ -32,7 +33,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'White logo on dark background'}
 					description={'In cases where the logo appears on a dark background,\nuse the white logo version.'}>
-					<div className={'my-6 lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_black_background.svg'}
@@ -48,8 +49,9 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Black logo on white background'}
 					description={'In cases where the logo cannot be printed in full colour\nuse the black logo version.'}>
-					<div className={'my-6 lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
+							style={{backgroundColor: 'white'}}
 							objectFit={'contain'}
 							src={'/index/logo_white_background.svg'}
 							width={560}
@@ -66,7 +68,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Clearspace'}
 					description={'Our logo should always be prominent and legible. The clear space exists to prevent other elements from being placed too close.\nClear space is equal to x1 Yearn symbol.'}>
-					<div className={'mt-6 md:my-6 lg:h-[315px]'}>
+					<div className={'mt-6 text-center md:my-6 lg:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_clearspace.svg'}
@@ -78,7 +80,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Minimum size'}
 					description={'The minimum recommended size of the logo is 85 pixels wide (on screen) or 30mm wide (in print).\n​'}>
-					<div className={'mt-6 md:my-6 lg:h-[315px]'}>
+					<div className={'mt-6 text-center md:my-6 lg:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/logo_minimum_size.svg'}
@@ -96,8 +98,9 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Primary Symbol'}
 					description={'Our default, full-color symbol only ever appears\non white background.'}>
-					<div className={'my-6 lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
+							style={{backgroundColor: 'white'}}
 							objectFit={'contain'}
 							src={'/index/symbol.svg'}
 							width={560}
@@ -115,7 +118,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'White symbol on dark background'}
 					description={'In cases where the symbol appears on a dark background,\nuse the white symbol version.'}>
-					<div className={'my-6 lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
 							objectFit={'contain'}
 							src={'/index/symbol_black_background.svg'}
@@ -131,8 +134,9 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Black symbol on white background'}
 					description={'In cases where the symbol cannot be printed in full colour\nuse the black symbol version.'}>
-					<div className={'my-6 bg-white lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
+							style={{backgroundColor: 'white'}}
 							objectFit={'contain'}
 							src={'/index/symbol_white_background.svg'}
 							width={560}
@@ -149,7 +153,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Clearspace'}
 					description={'Our symbol should always be prominent and legible. The clear space exists to prevent other elements from being placed too close.\nClear space is equal to x1 Yearn symbol.'}>
-					<div className={'mt-6 md:my-6 lg:h-[315px]'}>
+					<div className={'mt-6 text-center md:my-6 lg:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/symbol_clearspace.svg'}
@@ -161,7 +165,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Minimum size'}
 					description={'The minimum recommended size of the symbol is 40 pixels wide (on screen) or 15mm wide (in print).\n\n'}>
-					<div className={'mt-6 md:my-6 lg:h-[315px]'}>
+					<div className={'mt-6 text-center md:my-6 lg:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/symbol_minimum_size.svg'}
@@ -180,8 +184,9 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={'Token'}
 					description={'Our full-color token symbol can also be used as our social avatar.'}>
-					<div className={'my-6 bg-white lg:h-[315px]'}>
+					<div className={'my-6 text-center lg:h-[315px]'}>
 						<Image
+							style={{backgroundColor: 'white'}}
 							objectFit={'cover'}
 							src={'/index/token_symbol.svg'}
 							width={560}
@@ -196,7 +201,7 @@ function	Index(): ReactElement {
 				<ContentCard
 					title={''}
 					description={''}>
-					<div className={'mb-6 md:mt-20 lg:h-[315px]'}>
+					<div className={'mb-6 text-center md:mt-20 lg:h-[315px]'}>
 						<Image
 							objectFit={'cover'}
 							src={'/index/token_symbol_grid.svg'}
