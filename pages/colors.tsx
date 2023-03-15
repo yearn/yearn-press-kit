@@ -95,7 +95,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'h-[160px] bg-good-ol-grey-900 px-5 py-4 text-white'}>
+					<div className={'h-[160px] bg-good-ol-grey-900 px-5 py-4 text-black'}>
 						<p>{"Good ol' Grey 900"}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'F4F4F4'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'12.12.12'}</p>
