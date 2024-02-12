@@ -46,6 +46,7 @@ function	Index(): ReactElement {
 						srcPrint={'downloads/YEARN_LOGO_WHITE_CMYK.eps'}
 						srcPng={'/downloads/YEARN_LOGO_WHITE_RGB.png'} />
 				</ContentCard>
+
 				<ContentCard
 					title={'Black logo on white background'}
 					description={'In cases where the logo cannot be printed in full colour\nuse the black logo version.'}>
@@ -63,7 +64,6 @@ function	Index(): ReactElement {
 						srcPrint={'/downloads/YEARN_LOGO_BLACK_CMYK.eps'}
 						srcPng={'/downloads/YEARN_LOGO_BLACK_RGB.png'} />
 				</ContentCard>
-
 
 				<ContentCard
 					title={'Clearspace'}
@@ -128,7 +128,6 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_WHITE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_WHITE_CMYK.eps'}
 						srcPng={'/downloads/YEARN_SYMBOL_WHITE_RGB.png'} />
 				</ContentCard>
 				<ContentCard
@@ -145,7 +144,6 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLACK_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_BLACK_CMYK.eps'}
 						srcPng={'/downloads/YEARN_SYMBOL_BLACK_RGB.png'} />
 				</ContentCard>
 
@@ -195,7 +193,6 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_TOKEN_BLUE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_TOKEN_BLUE_CMYK.eps'}
 						srcPng={'/downloads/YEARN_TOKEN_BLUE_RGB.png'} />
 				</ContentCard>
 				<ContentCard
