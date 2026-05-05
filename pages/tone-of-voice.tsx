@@ -5,7 +5,7 @@ import	ContentCard				from	'components/ContentCard';
 function	ToneOfVoice(): ReactElement {
 	return (
 		<section aria-label={'Tone of voice'}>
-			<h2 className={'mb-6 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'tone-of-voice'} className={'mb-6 text-3xl font-bold text-neutral-900'}>
 				{'Tone of voice'}
 			</h2>
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>

@@ -5,7 +5,7 @@ import	ContentCard				from	'components/ContentCard';
 function	Applications(): ReactElement {
 	return (
 		<section aria-label={'Applications'}>
-			<h2 className={'mb-6 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'applications'} className={'mb-6 text-3xl font-bold text-neutral-900'}>
 				{'Applications'}
 			</h2>
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>

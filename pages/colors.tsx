@@ -11,10 +11,11 @@ function	Colors(): ReactElement {
 
 	return (
 		<section aria-label={'Color'}>
-			<h2 className={'mb-10 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'color'} className={'mb-10 text-3xl font-bold text-neutral-900'}>
 				{'Color'}
 			</h2>
 			<ContentCard
+				id={'primary-palette'}
 				title={'Primary Palette'}
 				description={'Our primary color palette consists of Blue, White and Black.\nThese colours contrast to create high visibility.'}>
 				<div className={'grid grid-cols-1 gap-x-5 pb-10 md:grid-cols-3 md:gap-y-14'}>
@@ -40,6 +41,7 @@ function	Colors(): ReactElement {
 				</div>
 			</ContentCard>
 			<ContentCard
+				id={'tints'}
 				title={'Tints'}
 				description={'Tints of color extend the color palette, for example,\nfor use in UI, charts and diagrams.'}>
 				<div className={'grid grid-cols-1 pt-5 pb-14 md:grid-cols-4'}>
@@ -105,6 +107,7 @@ function	Colors(): ReactElement {
 				</div>
 			</ContentCard>
 			<ContentCard
+				id={'secondary-palette'}
 				title={'Secondary Palette'}
 				description={'Our secondary color palette is used to extend flexibility and depth across our touchpoints. These colours can be used as panels to support an image or headline or contain body copy. In some instances, color can be used within a headline for internal and external communications.'}>
 				<div className={'grid grid-cols-1 pt-5 pb-20 md:grid-cols-4'}>

@@ -5,10 +5,10 @@ import	ContentCard				from	'components/ContentCard';
 function	Templates(): ReactElement {
 	return (
 		<section aria-label={'Templates'}>
-			<h2 className={'mb-6 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'templates'} className={'mb-6 text-3xl font-bold text-neutral-900'}>
 				{'Templates'}
 			</h2>
-			<h3 className={'font-bold'}>
+			<h3 id={'twitter'} className={'font-bold'}>
 				{'Twitter'}
 			</h3>
 			<div className={'grid grid-cols-1 gap-x-20 pb-20'}>
