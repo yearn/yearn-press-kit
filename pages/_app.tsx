@@ -79,7 +79,7 @@ function	MyApp(props: AppProps): ReactElement {
 					selected={router.pathname}
 					options={navbarMenuOptions}
 					wrapper={<Link passHref href={''} scroll={false} />} />
-				<div id={'app'} className={'mx-auto mt-14 mb-0 max-w-6xl'}>
+				<div id={'app'} className={'mx-auto mb-0 mt-14 max-w-6xl'}>
 					<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 						<motion.div
 							key={router.asPath}
