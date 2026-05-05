@@ -6,7 +6,7 @@ import	DownloadButtons				from	'components/DownloadButtons';
 function	Index(): ReactElement {
 	return (
 		<section aria-label={'Logo and Symbols'}>
-			<h2 className={'mb-10 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'logo'} className={'mb-10 text-3xl font-bold text-neutral-900'}>
 				{'Logo'}
 			</h2>
 			<div className={'grid grid-cols-1 gap-x-20 gap-y-14 pb-20 md:grid-cols-2'}>
@@ -91,7 +91,7 @@ function	Index(): ReactElement {
 				</ContentCard>
 
 			</div>
-			<h2 className={'mb-10 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'symbol'} className={'mb-10 text-3xl font-bold text-neutral-900'}>
 				{'Symbol'}
 			</h2>
 			<div className={'grid grid-cols-1 gap-x-20 gap-y-14 pb-20 md:grid-cols-2'}>
@@ -175,7 +175,7 @@ function	Index(): ReactElement {
 	
 
 			</div>
-			<h2 className={'mb-10 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'token-symbol'} className={'mb-10 text-3xl font-bold text-neutral-900'}>
 				{'Token symbol'}
 			</h2>
 			<div className={'grid grid-cols-1 gap-x-20 gap-y-14 pb-20 md:grid-cols-2'}>

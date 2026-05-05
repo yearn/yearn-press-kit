@@ -5,12 +5,14 @@ import	{slideInTransition}					from	'utils/framerAnimations';
 type TContent = {
 	title?: string; //todo: What if no title, how does that impact the layout?
 	description?: string; //todo: What if no title, how does that impact the layout?
+	id?: string;
 	children: ReactNode;
 }
 
 function	ContentCard({
 	title = '',
 	description = '',
+	id,
 	children
 }: TContent): ReactElement {
 	return (
@@ -19,7 +21,7 @@ function	ContentCard({
 			whileInView={'enter'}
 			className={'flex flex-col'}
 			variants={slideInTransition}>
-			<h3 className={'text-xl font-bold text-neutral-900'}>{title}</h3>
+			<h3 id={id} className={'text-xl font-bold text-neutral-900'}>{title}</h3>
 			<p className={'mt-4 whitespace-pre-line text-neutral-500'}>{description}</p>
 			{children}
 		</motion.div>

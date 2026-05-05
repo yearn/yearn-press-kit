@@ -5,7 +5,7 @@ import	ContentCard				from	'components/ContentCard';
 function	Typography(): ReactElement {
 	return (
 		<section aria-label={'Typography'}>
-			<h2 className={'mb-6 text-3xl font-bold text-neutral-900'}>
+			<h2 id={'typography'} className={'mb-6 text-3xl font-bold text-neutral-900'}>
 				{'Typography'}
 			</h2>
 			<div className={'grid grid-cols-1 gap-x-20 gap-y-14 pb-6'}>
