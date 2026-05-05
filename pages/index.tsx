@@ -109,7 +109,6 @@ function	Index(): ReactElement {
 					</div>
 					<DownloadButtons
 						srcScreen={'/downloads/YEARN_SYMBOL_BLUE_RGB.svg'}
-						srcPrint={'/downloads/YEARN_SYMBOL_BLUE_CMYK.eps'}
 						srcPng={'/downloads/YEARN_SYMBOL_BLUE_RGB.png'} />
 				</ContentCard>
 				<div />
