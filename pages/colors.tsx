@@ -44,7 +44,7 @@ function	Colors(): ReactElement {
 				id={'tints'}
 				title={'Tints'}
 				description={'Tints of color extend the color palette, for example,\nfor use in UI, charts and diagrams.'}>
-				<div className={'grid grid-cols-1 pt-5 pb-14 md:grid-cols-4'}>
+				<div className={'grid grid-cols-1 pb-14 pt-5 md:grid-cols-4'}>
 					<div className={'h-[160px] bg-good-ol-grey-100 px-5 py-4 text-black'}>
 						<p>{"Good ol' Grey 100"}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#F4F4F4'}</p>
@@ -110,15 +110,15 @@ function	Colors(): ReactElement {
 				id={'secondary-palette'}
 				title={'Secondary Palette'}
 				description={'Our secondary color palette is used to extend flexibility and depth across our touchpoints. These colours can be used as panels to support an image or headline or contain body copy. In some instances, color can be used within a headline for internal and external communications.'}>
-				<div className={'grid grid-cols-1 pt-5 pb-20 md:grid-cols-4'}>
-					<div className={'order-[1] h-[160px] bg-metaverse-sunset-50 px-5 py-4 text-black md:order-none'}>
+				<div className={'grid grid-cols-1 pb-20 pt-5 md:grid-cols-4'}>
+					<div className={'order-1 h-[160px] bg-metaverse-sunset-50 px-5 py-4 text-black md:order-none'}>
 						<p>{'Metaverse Sunset 50'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#FFEEA9'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'255.238.169'}</p>
 						<p>{'0.6.43.0'}</p>
 						<p>{'Pantone 0131c'}</p>
 					</div>
-					<div className={'order-[11] h-[160px] bg-disco-salmon-50 px-5 py-4 text-black md:order-none'}>
+					<div className={'order-11 h-[160px] bg-disco-salmon-50 px-5 py-4 text-black md:order-none'}>
 						<p>{'Disco Salmon 50'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#FFECEF'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'255.236.239'}</p>
@@ -141,14 +141,14 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[2] h-[160px] bg-metaverse-sunset-100 px-5 py-4 text-black md:order-none'}>
+					<div className={'order-2 h-[160px] bg-metaverse-sunset-100 px-5 py-4 text-black md:order-none'}>
 						<p>{'Metaverse Sunset 100'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#FFDC53'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'255.220.83'}</p>
 						<p>{'0.14.77.0'}</p>
 						<p>{'Pantone 113c'}</p>
 					</div>
-					<div className={'order-[12] h-[160px] bg-disco-salmon-100 px-5 py-4 text-black md:order-none'}>
+					<div className={'order-12 h-[160px] bg-disco-salmon-100 px-5 py-4 text-black md:order-none'}>
 						<p>{'Disco Salmon 100'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#FF90A1'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'255.144.161'}</p>
@@ -171,7 +171,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[3] h-[160px] bg-metaverse-sunset-200 px-5 py-4 text-black md:order-none'}>
+					<div className={'order-3 h-[160px] bg-metaverse-sunset-200 px-5 py-4 text-black md:order-none'}>
 						<p>{'Metaverse Sunset 200'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#F1F025'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'241.240.37'}</p>
@@ -201,7 +201,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[4] h-[160px] bg-metaverse-sunset-300 px-5 py-4 text-black md:order-none'}>
+					<div className={'order-4 h-[160px] bg-metaverse-sunset-300 px-5 py-4 text-black md:order-none'}>
 						<p>{'Metaverse Sunset 300'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#E6FC06'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'230.252.6'}</p>
@@ -229,7 +229,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[5] h-[160px] bg-metaverse-sunset-400 px-5 py-4 text-black md:order-none'}>
+					<div className={'order-5 h-[160px] bg-metaverse-sunset-400 px-5 py-4 text-black md:order-none'}>
 						<p>{'Metaverse Sunset 400'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#F0D308'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'240.211.8'}</p>
@@ -258,7 +258,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[6] h-[160px] bg-metaverse-sunset-500 px-5 py-4 text-white md:order-none'}>
+					<div className={'order-6 h-[160px] bg-metaverse-sunset-500 px-5 py-4 text-white md:order-none'}>
 						<p>{'Metaverse Sunset 500'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#F8A908'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'248.169.8'}</p>
@@ -287,7 +287,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[7] h-[160px] bg-metaverse-sunset-600 px-5 py-4 text-white md:order-none'}>
+					<div className={'order-7 h-[160px] bg-metaverse-sunset-600 px-5 py-4 text-white md:order-none'}>
 						<p>{'Metaverse Sunset 600'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#F27F07'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'242.127.7'}</p>
@@ -316,7 +316,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[8] h-[160px] bg-metaverse-sunset-700 px-5 py-4 text-white md:order-none'}>
+					<div className={'order-8 h-[160px] bg-metaverse-sunset-700 px-5 py-4 text-white md:order-none'}>
 						<p>{'Metaverse Sunset 700'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#EA5204'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'234.82.4'}</p>
@@ -346,7 +346,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[9] h-[160px] bg-metaverse-sunset-800 px-5 py-4 text-white md:order-none'}>
+					<div className={'order-9 h-[160px] bg-metaverse-sunset-800 px-5 py-4 text-white md:order-none'}>
 						<p>{'Metaverse Sunset 800'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#C73203'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'199.50.3'}</p>
@@ -376,7 +376,7 @@ function	Colors(): ReactElement {
 					</div>
 
 
-					<div className={'order-[10] h-[160px] bg-metaverse-sunset-900 px-5 py-4 text-white md:order-none'}>
+					<div className={'order-10 h-[160px] bg-metaverse-sunset-900 px-5 py-4 text-white md:order-none'}>
 						<p>{'Metaverse Sunset 900'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'#8F0000'}</p>
 						<p className={'cursor-pointer hover:font-bold'} onClick={copyColor}>{'143.0.0'}</p>

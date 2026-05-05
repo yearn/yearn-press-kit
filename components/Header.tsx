@@ -51,8 +51,8 @@ function	Header({
 			<MobileHeader
 				options={options}
 				wrapper={wrapper} />
-			<header className={'h-full w-full bg-neutral-100 md:h-[728px]'}>
-				<div className={'flex h-full w-full flex-col items-center px-4 pt-8 pb-0'}>
+			<header className={'size-full bg-neutral-100 md:h-[728px]'}>
+				<div className={'flex size-full flex-col items-center px-4 pb-0 pt-8'}>
 					<Link href={'/'} scroll={false}>
 						<div className={'hidden cursor-pointer md:flex'}>
 							<LogoYearn />
