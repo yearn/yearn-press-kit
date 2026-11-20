@@ -45,11 +45,6 @@ function	MyApp(props: AppProps): ReactElement {
 			label: 'Frames'
 		},
 		{
-			route: '/templates',
-			values: ['/templates'],
-			label: 'Templates'
-		},
-		{
 			route: '/tone-of-voice',
 			values: ['/tone-of-voice'],
 			label: 'Tone of Voice'
